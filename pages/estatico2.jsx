@@ -5,7 +5,8 @@ export function getStaticProps() {
     },
   };
 }
-
+// Em ambiente de desenvolvimento esta mesma função mesmo sendo estática continua sendo chamada
+//GetStaticProps() a requisição em ambiente de produção só é solicitado uma única vez
 export default function Estatico2(props) {
   return (
     <div>
