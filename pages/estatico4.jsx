@@ -16,7 +16,8 @@ export default function Estatico4(props) {
   }
   return (
     <div>
-      <h1>Estático #04</h1>      
+      <h1>Estático #04</h1>  
+      {renderizarProdutos()}    
     </div>
   );
 }
