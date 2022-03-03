@@ -8,7 +8,7 @@ export async function getStaticPaths() {
 
 
   return {
-    fallback: false, // gera erro 404
+    fallback: true, // false => 404
     paths        
   }
 }
@@ -27,12 +27,15 @@ export default function AlunoPorId(props) {
   const { aluno } = props
   return (
     <div>
-      <h1>aluno</h1>   
+      <h1>Detalhes do aluno</h1>   
+      {aluno ?
       <ul>
-        <li>aluno.id</li>
-        <li>aluno.nome</li>
-        <li>aluno.email</li>
-      </ul>   
+        <li>{aluno.id}</li>
+        <li>{aluno.nome}</li>
+        <li>{aluno.email}</li>
+      </ul>  
+      : false
+    } 
     </div>
   )
 }
